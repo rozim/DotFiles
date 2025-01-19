@@ -28,3 +28,9 @@ egion-end) nil))
 (add-hook 'python-mode-hook 'dave-python-make-newline-indent)
 
 (transient-mark-mode 1)
+
+(load "ido")
+(ido-mode t)
+(setq ido-case-fold nil
+      ido-default-file-method 'samewindow
+      ido-default-buffer-method 'samewindow)
