@@ -29,8 +29,17 @@ egion-end) nil))
 
 (transient-mark-mode 1)
 
+; ido
 (load "ido")
 (ido-mode t)
 (setq ido-case-fold nil
       ido-default-file-method 'samewindow
       ido-default-buffer-method 'samewindow)
+
+; occurrer (new for 2025)
+(defun occurrer (substring)
+  "Search for SUBSTRING in all open buffers using multi-occur-in-matching-buffers."
+  (interactive "sSearch for substring: ")
+  (multi-occur-in-matching-buffers ".*" substring))
+
+(global-set-key "o" 'occurrer)
