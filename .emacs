@@ -6,7 +6,7 @@
 (defun ir () "indent region" (interactive) (indent-region (region-beginning) (r\
 egion-end) nil))
 
-(global-set-key "g" 'goto-line)
+(global-set-key (kbd "ESC g") 'goto-line)
 
 (define-key ctl-x-map "." 'find-file-at-point)
 
@@ -42,4 +42,4 @@ egion-end) nil))
   (interactive "sSearch for substring: ")
   (multi-occur-in-matching-buffers ".*" substring))
 
-(global-set-key "o" 'occurrer)
+(global-set-key (kbd "ESC o") 'occurrer)
